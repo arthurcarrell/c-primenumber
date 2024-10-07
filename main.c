@@ -64,6 +64,14 @@ long int checkIfPrimeNumber(unsigned long long int numberToCheck)
 int main(int argc, char *argv[])
 {
     unsigned long long int checkNum = 18446744073709551615; // unsigned 64-bit largest number
-    printf("Input: %llu -- checkIfPrimeNumber returned: %ld\n", checkNum, checkIfPrimeNumber(checkNum));
+    long int result = checkIfPrimeNumber(checkNum);
+    if (result == -1)
+    {
+        printf("%llu is a prime number.\n", checkNum);
+    }
+    else
+    {
+        printf("%llu is not a prime number.\n", checkNum);
+    }
     return 1;
 }
